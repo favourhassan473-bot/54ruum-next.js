@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0b1220;
+  color: #f3ede1;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.marquee-row {
+  animation: scrollLeft 55s linear infinite;
+}
+
+.marquee-row.reverse {
+  animation-name: scrollRight;
+}
+
+.ticker-track {
+  animation: scrollLeft 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-row,
+  .ticker-track {
+    animation: none;
+  }
+}
+
+/* Hover effects for pill buttons site-wide */
+.btn-dark {
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    opacity 0.2s ease;
+}
+.btn-dark:hover {
+  background-color: #2a2620 !important;
+  transform: translateY(-1px);
+}
+.btn-dark:active {
+  transform: translateY(0);
+}
+
+.btn-light {
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+.btn-light:hover {
+  background-color: #f0ebe0 !important;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+.btn-outline-dark:hover {
+  background-color: rgba(20, 18, 16, 0.06);
+  transform: translateY(-1px);
+}
+
+.story-card-link {
+  display: block;
+  transition: transform 0.25s ease;
+}
+.story-card-link:hover {
+  transform: translateY(-4px);
+}
+
+.link-hover {
+  transition: opacity 0.2s ease;
+}
+.link-hover:hover {
+  opacity: 0.65;
+}
