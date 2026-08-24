@@ -25,10 +25,10 @@ export default function Home() {
   return (
     <div
       style={{
-        position: "relative",
-        height: "100vh",
-        minHeight: 600,
+        position: "fixed",
+        inset: 0,
         width: "100%",
+        height: "100%",
         overflow: "hidden",
         background: "#000",
       }}
